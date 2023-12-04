@@ -1,0 +1,108 @@
+.statusbar {
+    display: table;
+    padding: 2px;
+
+    .status-label {
+        position: relative;
+    }
+
+    #status-label-pages, #status-label-zoom {
+        cursor: pointer;
+    }
+
+    #status-label-zoom {
+        text-align: center;
+    }
+
+    #btn-zoom-topage, #btn-zoom-towidth {
+        .margin-right-8();
+    }
+
+    .status-group {
+        display: table-cell;
+        white-space: nowrap;
+        vertical-align: top;
+        &.dropup {
+            position: static;
+        }
+
+        .status-label.margin-top-large {
+            margin-top: 6px;
+        }
+
+        button.margin-top-small,
+        .margin-top-small > button,
+        .margin-top-small > .btn-group {
+            margin-top: 3px;
+        }
+
+        #btn-zoom-up {
+            .margin-right(40px);
+        }
+    }
+
+    .separator {
+        margin: 0 6px;
+
+        &.short {
+            height: 25px;
+        }
+
+        &.space {
+            margin: 0px 2px;
+            border: none;
+        }
+    }
+
+    #btn-cnt-lang {
+        button {
+            font-weight: 700;
+        }
+    }
+
+    .cnt-zoom {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 4px;
+        .dropdown-menu {
+            min-width: 80px;
+            .margin-left(-4px);
+
+            li {
+                > a {
+                    text-align: center;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+
+    #status-goto-box {
+        padding: 10px;
+        .margin-left(40px);
+        margin-bottom: 2px;
+        min-width: 130px;
+
+        > label {
+            display: inline-block;
+            .margin-right-10();
+            line-height: 22px;
+        }
+
+        > input[type=text] {
+            width: 50px;
+            display: inline-block;
+        }
+    }
+    
+    .lang-menu {
+        li a {
+            .padding-x(28px, 20px);
+        }
+    }
+
+    #slot-status-btn-preview {
+        width: 32px;
+    }
+}

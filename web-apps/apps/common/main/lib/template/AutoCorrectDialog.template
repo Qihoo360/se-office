@@ -1,0 +1,139 @@
+<div id="id-autocorrect-dialog-settings-math" class="settings-panel active">
+    <div class="inner-content">
+        <table cols="1" style="width: 100%;">
+        <tr>
+            <td style="padding-bottom: 8px;">
+                <div id="auto-correct-chb-replace-type"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label style="width: 117px;"><%= scope.textReplace %>:</label>
+                <label><%= scope.textBy %>:</label>
+                </td>
+            </tr>
+        <tr>
+            <td>
+                <div id="auto-correct-replace" class="margin-right-2" style="height:22px;width: 115px;display: inline-block;"></div>
+                <div id="auto-correct-by" style="height:22px;width: 234px;display: inline-block;"></div>
+                </td>
+            </tr>
+        <tr>
+            <td style="padding-bottom: 8px;">
+                <div id="auto-correct-math-list" class="" style="width:100%; height: 208px;"></div>
+                </td>
+            </tr>
+        <tr>
+            <td style="padding-bottom: 8px;">
+                <button type="button" class="btn btn-text-default auto" id="auto-correct-btn-reset" style="min-width: 86px;"><%= scope.textResetAll %></button>
+                <button type="button" class="btn btn-text-default auto float-right" id="auto-correct-btn-delete" style="min-width: 86px;"><%= scope.textDelete %></button>
+                <button type="button" class="btn btn-text-default auto float-right margin-right-5" id="auto-correct-btn-edit" style="min-width: 86px;"><%= scope.textAdd %></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="id-autocorrect-dialog-settings-recognized" class="settings-panel">
+    <div class="inner-content">
+        <table cols="1" style="width: 100%;">
+            <tr>
+                <td style="padding-bottom: 8px;">
+                    <label><%= scope.textRecognizedDesc %></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="auto-correct-rec-find" style="height:22px;width: 100%;margin-bottom: 4px;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-bottom: 8px;">
+                    <div id="auto-correct-recognized-list" class="" style="width:100%; height: 208px;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-bottom: 8px;">
+                    <button type="button" class="btn btn-text-default auto" id="auto-correct-btn-rec-reset" style="min-width: 86px;"><%= scope.textResetAll %></button>
+                    <button type="button" class="btn btn-text-default auto float-right" id="auto-correct-btn-rec-delete" style="min-width: 86px;"><%= scope.textDelete %></button>
+                    <button type="button" class="btn btn-text-default auto float-right margin-right-5" id="auto-correct-btn-rec-edit" style="min-width: 86px;"><%= scope.textAdd %></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="id-autocorrect-dialog-settings-de-autoformat" class="settings-panel">
+    <div class="inner-content" style="width: 100%;">
+        <div class="padding-small">
+            <label class="header"><%= scope.textReplaceText %></label>
+        </div>
+        <div class="padding-small">
+            <div class="padding-small" id="id-autocorrect-dialog-chk-quotes"></div>
+            <div class="padding-small" id="id-autocorrect-dialog-chk-hyphens"></div>
+            <div class="padding-small"  id="id-autocorrect-dialog-chk-hyperlink"></div>
+            <div class="padding-small" id="id-autocorrect-dialog-chk-double-space"></div>
+        </div>
+        <div class="padding-small">
+            <label class="header"><%= scope.textApplyText %></label>
+        </div>
+        <div class="padding-small">
+            <div class="padding-small" id="id-autocorrect-dialog-chk-bulleted"></div>
+            <div class="padding-small" id="id-autocorrect-dialog-chk-numbered"></div>
+        </div>
+    </div>
+</div>
+<div id="id-autocorrect-dialog-settings-sse-autoformat" class="settings-panel">
+    <div class="inner-content" style="width: 100%;">
+        <div class="padding-small">
+            <label class="header"><%= scope.textReplaceText %></label>
+        </div>
+        <div class="padding-small">
+            <div class="padding-small" id="id-autocorrect-dialog-chk-hyperlink"></div>
+        </div>
+        <div class="padding-small">
+            <label class="header"><%= scope.textApplyAsWork %></label>
+        </div>
+        <div class="padding-small">
+            <div class="padding-small" id="id-autocorrect-dialog-chk-new-rows"></div>
+        </div>
+    </div>
+</div>
+<div id="id-autocorrect-dialog-settings-exceptions" class="settings-panel">
+    <div class="inner-content">
+        <table cols="1" style="width: 100%;">
+            <tr>
+                <td style="padding-bottom: 12px;">
+                    <div id="auto-correct-exceptions-chk-sentence" style="padding-bottom: 8px;"></div>
+                    <div id="auto-correct-exceptions-chk-cells"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label><%= scope.textForLangFL %></label>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-bottom: 12px;">
+                    <div id="auto-correct-exceptions-lang" style="display: inline-block;vertical-align: middle;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label><%= scope.textFLDont %></label>
+                    <div id="auto-correct-exceptions-find" style="height:22px;width: 100%;margin-bottom: 4px;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-bottom: 8px;">
+                    <div id="auto-correct-exceptions-list" class="" style="width:100%; height: 139px;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-bottom: 18px;">
+                    <button type="button" class="btn btn-text-default auto" id="auto-correct-btn-exceptions-reset" style="min-width: 86px;"><%= scope.textResetAll %></button>
+                    <button type="button" class="btn btn-text-default auto float-right" id="auto-correct-btn-exceptions-delete" style="min-width: 86px;"><%= scope.textDelete %></button>
+                    <button type="button" class="btn btn-text-default auto float-right margin-right-5" id="auto-correct-btn-exceptions-edit" style="min-width: 86px;"><%= scope.textAdd %></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

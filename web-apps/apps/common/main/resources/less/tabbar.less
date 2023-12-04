@@ -1,0 +1,67 @@
+.nav-tabs {
+    white-space: nowrap;
+    overflow: hidden;
+
+    > li {
+        float: none;
+        display: inline-block;
+
+        &.active {
+            > span, > span:hover, > span:focus {
+                background-color: @background-normal-ie;
+                background-color: @background-normal;
+                color: @text-normal-ie;
+                color: @text-normal;
+                border-color: @background-normal-ie;
+                border-color: @background-normal;
+                cursor: pointer;
+            }
+        }
+
+        &:not(.dragged) {
+            transition: left .2s;
+        }
+
+        > span {
+            display: inline;
+            background-color: @background-toolbar-ie;
+            background-color: @background-toolbar;
+            color: @text-secondary-ie;
+            color: @text-secondary;
+
+            padding-top: 0;
+            padding-bottom: 0;
+            white-space: pre;
+            text-align: center;
+
+            &::after {
+                content: attr(tabtitle);
+                .font-weight-bold();
+                display: block;
+            }
+
+            &:hover, &:focus {
+                background-color: @background-toolbar-ie;
+                background-color: @background-toolbar;
+                border-color: @background-toolbar-ie;
+                border-color: @background-toolbar;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.bottom {
+        border-bottom: none;
+        border-top: none;
+
+        > li {
+            vertical-align: middle;
+
+            > span {
+                padding-bottom: 1px;
+                border-radius: 0 0 4px 4px;
+            }
+        }
+    }
+}
+

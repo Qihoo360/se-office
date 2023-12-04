@@ -1,0 +1,75 @@
+{
+  "name": "se-office-crx",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "npm run serve",
+    "serve": "vue-cli-service build --watch",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "analyze": "npm run build --report"
+  },
+  "dependencies": {
+    "element-plus": "^2.4.1",
+    "file-saver": "^2.0.5",
+    "min-log": "^2.6.1",
+    "path-browserify": "^1.0.1",
+    "pinia": "^2.1.7",
+    "vue": "^3.3.6"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.231",
+    "@types/file-saver": "^2.0.5",
+    "@types/path-browserify": "^1.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-typescript": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/eslint-config-typescript": "^9.1.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^5.1.2",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "prettier": "^2.4.1",
+    "sass": "^1.32.7",
+    "sass-loader": "^12.0.0",
+    "typescript": "~4.5.5",
+    "unplugin-auto-import": "^0.15.2",
+    "unplugin-vue-components": "^0.24.1",
+    "webpack-crx": "^1.0.8"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "webextensions": true,
+      "vue/setup-compiler-macros": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended",
+      "@vue/typescript/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {
+      "no-debugger": "warn",
+      "no-empty": "warn",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-empty-function": "off",
+      "no-async-promise-executor": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

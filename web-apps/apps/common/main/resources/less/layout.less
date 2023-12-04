@@ -1,0 +1,66 @@
+/**
+ *    layout.less
+ *
+ *    Created by Maxim Kadushkin on 10 February 2014
+ *    Copyright (c) 2018 Ascensio System SIA. All rights reserved.
+ *
+ */
+
+.layout-ct {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .layout-item, .layout-resizer {
+        position: absolute;
+    }
+
+    .layout-resizer {
+        z-index: @zindex-dropdown - 10;
+        background: @background-toolbar-ie;
+        background: @background-toolbar;
+        border: 0 none;
+
+        &.move {
+            opacity: 0.4;
+        }
+    }
+
+    &.vbox {
+        .layout-item, > .layout-resizer {
+            left: 0;
+            width: 100%;
+        }
+
+        > .layout-resizer {
+            height: 4px;
+            cursor: row-resize;
+
+            &.move {
+                border-top: solid @scaled-one-px-value-ie @border-toolbar-ie;
+                border-top: solid @scaled-one-px-value @border-toolbar;
+                border-bottom: solid @scaled-one-px-value-ie @border-toolbar-ie;
+                border-bottom: solid @scaled-one-px-value @border-toolbar;
+            }
+        }
+    }
+
+    &.hbox {
+        .layout-item, > .layout-resizer {
+            top: 0;
+            height: 100%;
+        }
+
+        > .layout-resizer {
+            width: 4px;
+            cursor: col-resize;
+
+            &.move {
+                border-left: solid @scaled-one-px-value-ie @border-toolbar-ie;
+                border-left: solid @scaled-one-px-value @border-toolbar;
+                border-right: solid @scaled-one-px-value-ie @border-toolbar-ie;
+                border-right: solid @scaled-one-px-value @border-toolbar;
+            }
+        }
+    }
+}

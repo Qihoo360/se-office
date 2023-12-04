@@ -1,0 +1,80 @@
+{
+  "name": "SE Office",
+  "version": "1.0.0",
+  "description": "支持查看和编辑Office文档",
+
+  "icons": {
+    "16": "img/64.png",
+    "48": "img/64.png",
+    "128": "img/64.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval' blob:; object-src 'self'",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyRRbYD+W8jKTRvnx+RkVZiVurxWW1Biu4j7xoMvG3492RW97WHvXrreFmzSy2Xk/xJh9ZgZDUlnEioyT/CvcKTgALhmMUBLQmnxC1xs+TsfZ2MiOTC2LH9jYdHgHple9kLiV2FKG2XkbHg6K7/rTGam0Hl4slaLtZj7HQ5TZzgtddsRSYnuX3UzFiwv1vnIH9SjWmjycYlN+zAt4HnEslRUEroXQlWmAqZCeDbE78Ifl66XE/FoYpt6CUzBnX9KBEWNi2c0glEl/bwTkQwjkT01EkEFhLA2It5YvmMdmQpOsFzHJ+nZmhL9b2XVU+EU3M9bnVtOob97qBMM8UGTKqQIDAQAB",
+  "permissions": ["storage", "unlimitedStorage", "downloads"],
+  "plugins": [
+    {
+      "path": "plugin\\office.dll"
+    }
+  ],
+
+  "web_accessible_resources": ["img/*"],
+
+  "background": {
+    "page": "background.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "file:///*/*",
+
+        "*://*/*.doc*",
+        "*://*/*.xls*",
+        "*://*/*.ppt*",
+        "*://*/*.DOC*",
+        "*://*/*.XLS*",
+        "*://*/*.PPT*",
+
+        "*://*/*.docx*",
+        "*://*/*.xlsx*",
+        "*://*/*.pptx*",
+        "*://*/*.DOCX*",
+        "*://*/*.XLSX*",
+        "*://*/*.PPTX*"
+      ],
+      "js": ["js/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "mime_types": [
+    "application/msword",
+    "application/vnd.ms-excel",
+    "application/vnd.ms-powerpoint",
+    "text/csv",
+
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+
+    "application/vnd.oasis.opendocument.text",
+    "application/vnd.oasis.opendocument.spreadsheet",
+    "application/vnd.oasis.opendocument.presentation",
+
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.template",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.template",
+    "application/vnd.openxmlformats-officedocument.presentationml.template",
+
+    "application/vnd.ms-word.document.macroEnabled.12",
+    "application/vnd.ms-excel.sheet.macroEnabled.12",
+    "application/vnd.ms-powerpoint.presentation.macroEnabled.12",
+
+    "application/vnd.openxmlformats-officedocument.presentationml.slideshow"
+  ],
+  "mime_types_handler": "app.html"
+}

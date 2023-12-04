@@ -1,0 +1,94 @@
+.about-dlg {
+    .asc-about-office {
+        background-repeat: no-repeat;
+        margin-bottom: 5px;
+
+        &:before {
+            content: ~"url('@{common-image-const-path}/about/logo_s.svg')";
+
+            .theme-type-dark & {
+                content: ~"url('@{common-image-const-path}/about/logo-white_s.svg')";
+            }
+
+            height: 45px;
+            width: auto;
+        }
+    }
+
+    .asc-about-header {
+        margin: 0 30px;
+        font: 12px Tahoma;
+        .font-size-medium();
+        letter-spacing: 1px;
+        color: @text-normal-ie;
+        color: @text-normal;
+        .font-weight-bold();
+        white-space: nowrap;
+    }
+
+    .asc-about-version {
+        font: 15px Tahoma;
+        color: @text-tertiary-ie;
+        color: @text-tertiary;
+    }
+
+    .asc-about-companyname {
+        font: bold 15px Tahoma;
+        letter-spacing: 0.01em;
+        color: @text-normal-ie;
+        color: @text-normal;
+    }
+
+    label {
+        &.asc-about-desc,
+        &.asc-about-desc-name,
+        &.asc-about-lic {
+            font: 12px Tahoma;
+            .font-size-medium();
+            color: @text-normal-ie;
+            color: @text-normal;
+        }
+
+        &.asc-about-desc-name {
+            color: @text-normal-ie;
+            color: @text-normal;
+            white-space: pre;
+        }
+
+        &.asc-about-lic {
+            .font-weight-bold();
+        }
+
+    }
+
+    a {
+        font: 12px Tahoma;
+        .font-size-medium();
+        color: @text-normal-ie;
+        color: @text-normal;
+    }
+
+    .separator.horizontal {
+        width: 100%;
+
+        &.short {
+            width: 220px;
+
+            &.left {
+                float: right;
+            }
+        }
+    }
+
+    .padding-small {
+        padding-bottom: 10px;
+    }
+
+    .padding-large {
+        padding-bottom: 40px;
+    }
+
+    .margin-bottom {
+        margin-bottom: 20px;
+    }
+}

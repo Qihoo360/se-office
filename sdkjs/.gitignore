@@ -1,0 +1,17 @@
+.idea/
+build/node_modules
+build/$weak$.js
+build/maps
+common/AllFonts.js
+common/Images/fonts_thumbnail*
+common/Images/themes_thumbnail*
+slide/themes/theme*
+slide/themes/themes.js
+*~
+.DS_Store
+/deploy
+/develop
+node_modules
+package-lock.json
+*/node_modules
+*/package-lock.json

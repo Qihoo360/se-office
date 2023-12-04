@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SE Office</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      .holder {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 999999;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(0, 0, 0, 0);
+      }
+      #plugin {
+        position: fixed;
+        left: -10000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="holder"></div>
+    <div id="iframe"></div>
+    <script src="web-apps/apps/api/documents/api.js"></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+.theme-colorpalette {
+    margin: 0 !important;
+    //color: black;
+
+    em {
+        border: none;
+        display: block;
+
+        span{
+            height: 12px;
+            width: 12px;
+            cursor: pointer;
+            display: block;
+        }
+    }
+
+    &.palette-large em {
+        span{
+            height: 28px;
+            width: 28px;
+        }
+    }
+
+    a {
+        padding: 0;
+        margin: calc(1px - 1px / @pixel-ratio-factor);
+        border: @scaled-one-px-value-ie solid @background-normal-ie;
+        border: @scaled-one-px-value solid @background-normal;
+        .float-left();
+        text-decoration: none;
+        -moz-outline: 0 none;
+        outline: 0 none;
+        cursor: pointer;
+
+        em span {
+            border: @scaled-one-px-value-ie solid @border-color-shading-ie;
+            border: @scaled-one-px-value solid @border-color-shading;
+        }
+
+        &:hover, &:focus, &.selected {
+            border-color: @icon-normal-ie;
+            border-color: @icon-normal;
+            em span {
+                border-color: @background-normal-ie;
+                border-color: @background-normal;
+            }
+        }
+    }
+
+    .dynamic-empty-color {
+        background: @background-normal-ie;
+        background: @background-normal;
+
+        em span {
+            border: solid @scaled-one-px-value-ie @border-color-shading-ie;
+            border: solid @scaled-one-px-value @border-color-shading;
+            background: @background-normal-ie;
+            background: @background-normal;
+        }
+    }
+
+    .color-transparent {
+        em span {
+            border:solid @scaled-one-px-value-ie @border-color-shading-ie;
+            border:solid @scaled-one-px-value @border-color-shading;
+        }
+    }
+
+    .palette-inner {
+        padding: 4px 0 0 12px;
+        .rtl & {
+            padding: 4px 12px 0 0;
+        }
+    }
+
+    .palette-color-caption {
+        width:100%;
+        .float-left();
+        .text-align-left();
+        .font-size-normal();
+    }
+
+    .palette-color-spacer {
+        width: 100%;
+        height: 8px;
+        .float-left();
+    }
+
+    .palette-color-dynamiccolors {
+        padding: 4px 0 0 12px;
+        .rtl & {
+            padding: 4px 12px 0 0;
+        }
+    }
+
+    .divider {
+        width: 100%;
+        float: left;
+    }
+
+    .color-divider {
+        width:100%;
+        height:0;
+        float:left;
+    }
+}
+

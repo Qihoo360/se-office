@@ -1,0 +1,288 @@
+{
+    "name": "common",
+    "version": "4.3.0",
+    "build": 39,
+    "homepage": "http://www.onlyoffice.com",
+    "private": true,
+    "sdk": {
+        "clean": [
+            "../deploy/sdkjs"
+        ],
+        "copy": {
+            "script": {
+                "files": [
+                    {
+                        "expand": true,
+                        "cwd": "../../sdkjs/common/",
+                        "src": [
+                            "Images/*",
+                            "Images/placeholders/*",
+							"Images/content_controls/*",
+                            "Native/*.js",
+                            "libfont/js/fonts.*",
+                            "libfont/wasm/fonts.*"
+                        ],
+                        "dest": "../deploy/sdkjs/common/"
+                    },
+                    {
+                        "expand": true,
+                        "src": "../../sdkjs/word/sdk-*.js",
+                        "dest": "../deploy/sdkjs/word/"
+                    },
+                    {
+                        "expand": true,
+                        "cwd": "../../sdkjs/cell/css/",
+                        "src": "*.css",
+                        "dest": "../deploy/sdkjs/cell/css/"
+                    },
+                    {
+                        "expand": true,
+                        "src": "../../sdkjs/cell/sdk-*.js",
+                        "dest": "../deploy/sdkjs/cell/"
+                    },
+                    {
+                        "expand": true,
+                        "cwd": "../../sdkjs/slide/themes/",
+                        "src": "**/**",
+                        "dest": "../deploy/sdkjs/slide/themes/"
+                    },
+                    {
+                        "expand": true,
+                        "src": "../../sdkjs/slide/sdk-*.js",
+                        "dest": "../deploy/sdkjs/slide/"
+                    }
+                ]
+            },
+            "desktop": {
+                "src": "../../sdkjs/common/HtmlFileInternal/AllFonts.js",
+                "dest": "../deploy/sdkjs/common/AllFonts.js"
+            }
+        }
+    },
+    "api": {
+        "clean": [
+            "../deploy/web-apps/apps/api"
+        ],
+        "copy": {
+            "script": {
+                "expand": true,
+                "cwd": "../apps/api/",
+                "src": [
+                    "**",
+                    "!**/*.desktop"
+                ],
+                "dest": "../deploy/web-apps/apps/api/"
+            },
+            "desktop": {
+                "src": "../apps/api/documents/index.html.desktop",
+                "dest": "../deploy/web-apps/apps/api/documents/index.html"
+            }
+        }
+    },
+    "apps-common": {
+        "clean": [
+            "../deploy/web-apps/apps/common"
+        ],
+        "copy": {
+            "alphabetletters": {
+                "expand": true,
+                "cwd": "../apps/common/main/resources/alphabetletters",
+                "src": "*.json",
+                "dest": "../deploy/web-apps/apps/common/main/resources/alphabetletters"
+            },
+            "themes": {
+                "src": "../apps/common/main/resources/themes/themes.json",
+                "dest": "../deploy/web-apps/apps/common/main/resources/themes/themes.json"
+            },
+            "help": {
+                "expand": true,
+                "cwd": "../apps/common/main/resources/help/",
+                "src": [
+                    "**/*.{png,jpg,gif,html,css}",
+                    "!*_/**",
+                    "!**/src/**"
+                ],
+                "dest": "../deploy/web-apps/apps/common/main/resources/help/"
+            }
+        },
+        "imagemin": {
+            "images-common": [
+                {
+                    "expand": true,
+                    "cwd": "../apps/common/main/resources/img/",
+                    "src": [
+                        "**/*.{png,jpg,gif}",
+                        "!toolbar/*x/**/*"
+                    ],
+                    "dest": "../deploy/web-apps/apps/common/main/resources/img/"
+                }
+            ]
+        },
+        "svgicons": {
+            "common": [
+                {
+                    "expand": true,
+                    "cwd": "../apps/common/main/resources/img",
+                    "src": "**/*.svg",
+                    "dest": "../deploy/web-apps/apps/common/main/resources/img"
+                }
+            ]
+        }
+    },
+    "bootstrap": {
+        "clean": [
+            "../deploy/web-apps/vendor/bootstrap"
+        ],
+        "copy": {
+            "script": {
+                "src": "../vendor/bootstrap/dist/js/bootstrap.min.js",
+                "dest": "../deploy/web-apps/vendor/bootstrap/dist/js/bootstrap.min.js"
+            },
+            "font": {
+                "expand": true,
+                "cwd": "../vendor/bootstrap/dist/fonts/",
+                "src": "*",
+                "dest": "../deploy/web-apps/vendor/bootstrap/dist/fonts/"
+            },
+            "css": {
+                "src": "../vendor/bootstrap/dist/css/bootstrap.min.css",
+                "dest": "../deploy/web-apps/vendor/bootstrap/dist/css/bootstrap.min.css"
+            }
+        }
+    },
+    "jquery": {
+        "clean": [
+            "../deploy/web-apps/vendor/jquery"
+        ],
+        "copy": {
+            "script": {
+                "files": [
+                    {
+                        "src": "../vendor/jquery/jquery.min.js",
+                        "dest": "../deploy/web-apps/vendor/jquery/jquery.min.js"
+                    },
+                    {
+                        "src": "../vendor/jquery.browser/dist/jquery.browser.min.js",
+                        "dest": "../deploy/web-apps/vendor/jquery/jquery.browser.min.js"
+                    }
+                ]
+            }
+        }
+    },
+    "megapixel": {
+        "clean": [
+            "../deploy/web-apps/vendor/megapixel"
+        ],
+        "copy": {
+            "script": {
+                "src": "../vendor/megapixel/megapix-image-min.js",
+                "dest": "../deploy/web-apps/vendor/megapixel/megapix-image-min.js"
+            }
+        }
+    },
+    "socketio": {
+        "clean": [
+            "../deploy/web-apps/vendor/socketio"
+        ],
+        "copy": {
+            "script": {
+                "src": "../vendor/socketio/socket.io.min.js",
+                "dest": "../deploy/web-apps/vendor/socketio/socket.io.min.js"
+            }
+        }
+    },
+    "xregexp": {
+        "clean": [
+            "../deploy/web-apps/vendor/xregexp"
+        ],
+        "copy": {
+            "script": {
+                "src": "../vendor/xregexp/xregexp-all-min.js",
+                "dest": "../deploy/web-apps/vendor/xregexp/xregexp-all-min.js"
+            }
+        }
+    },
+    "underscore": {
+        "clean": [
+            "../deploy/web-apps/vendor/underscore"
+        ],
+        "copy": {
+            "script": {
+                "src": "../vendor/underscore/underscore-min.js",
+                "dest": "../deploy/web-apps/vendor/underscore/underscore-min.js"
+            }
+        }
+    },
+    "iscroll": {
+        "clean": [
+            "../deploy/web-apps/vendor/iscroll"
+        ],
+        "copy": {
+            "script": {
+                "src": "../vendor/iscroll/iscroll.min.js",
+                "dest": "../deploy/web-apps/vendor/iscroll/iscroll.min.js"
+            }
+        }
+    },
+    "fetch": {
+        "clean": [
+            "../deploy/web-apps/vendor/fetch"
+        ],
+        "copy": {
+            "script": {
+                "src": "../vendor/fetch/fetch.umd.js",
+                "dest": "../deploy/web-apps/vendor/fetch/fetch.umd.js"
+            }
+        }
+    },
+    "es6-promise": {
+        "clean": [
+            "../deploy/web-apps/vendor/es6-promise"
+        ],
+        "copy": {
+            "script": {
+                "src": "../vendor/es6-promise/es6-promise.auto.min.js",
+                "dest": "../deploy/web-apps/vendor/es6-promise/es6-promise.auto.min.js"
+            }
+        }
+    },
+    "requirejs": {
+        "clean": [
+            "../deploy/web-apps/vendor/requirejs"
+        ],
+        "min": {
+            "src": "../vendor/requirejs/require.js",
+            "dest": "../deploy/web-apps/vendor/requirejs/require.js"
+        }
+    },
+    "common-embed": {
+        "clean": [
+            "../deploy/web-apps/apps/common/embed"
+        ],
+        "copy": {
+            "app-logo": {
+                "dest": "../deploy/web-apps/apps/common/embed/resources/img/logo.svg",
+                "src": "../apps/common/embed/resources/img/logo.svg"
+            }
+        }
+    },
+    "tasks": {
+        "deploy": [
+            "increment-build",
+            "deploy-api",
+            "deploy-apps-common",
+            "deploy-sdk",
+            "deploy-socketio",
+            "deploy-xregexp",
+            "deploy-requirejs",
+            "deploy-megapixel",
+            "deploy-jquery",
+            "deploy-underscore",
+            "deploy-bootstrap",
+            "deploy-iscroll",
+            "deploy-fetch",
+            "deploy-es6-promise",
+            "deploy-common-embed"
+        ]
+    }
+}

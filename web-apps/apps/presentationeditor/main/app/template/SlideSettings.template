@@ -1,0 +1,132 @@
+<table cols="1">
+    <tr>
+        <td>
+            <label class="header"><%= scope.strFill %></label>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-small">
+            <div id="slide-combo-fill-src" style="width: 100%;"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div id="slide-panel-color-fill" class="padding-small" style="width: 100%;">
+                <div id="slide-back-color-btn" style=""></div>
+            </div>
+            <div id="slide-panel-image-fill" class="settings-hidden padding-small" style="width: 100%;">
+                <table cols="2" style="width: 100%;">
+                    <tr>
+                        <td colspan="2" class="padding-small">
+                            <div id="slide-button-replace" style="width:100%;"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top">
+                            <div id="slide-combo-fill-type" style="width: 90px;"></div>
+                        </td>
+                        <td rowspan="2">
+                            <div id="slide-texture-img-box" class="float-right" style="width: 90px; height: 80px;">
+                                <div id="slide-texture-img" style="width: 50px;height: 50px;"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: bottom">
+                            <label class="input-label" style=""><%= scope.textTexture %></label>
+                            <div id="slide-combo-fill-texture" style="width: 90px;"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="slide-panel-pattern-fill" class="settings-hidden padding-small" style="width: 100%;">
+                <label class="input-label" style="margin-top: 3px;"><%= scope.strPattern %></label>
+                <div id="slide-combo-pattern" style="width: 100%; height: 42px; margin-bottom: 8px;"></div>
+                <div style="width: 100%; height: 25px; margin-bottom: 8px;">
+                    <label class="input-label" style="margin-top: 3px;"><%= scope.strForeground %></label>
+                    <div id="slide-foreground-color-btn" class="float-right"></div>
+                </div>
+                <div style="width: 100%; height: 25px;">
+                    <label class="input-label" style="margin-top: 3px;"><%= scope.strBackground %></label>
+                    <div id="slide-background-color-btn" class="float-right"></div>
+                </div>
+            </div>
+            <div id="slide-panel-gradient-fill" class="settings-hidden padding-small" style="width: 100%;">
+                <table cols="3" style="margin-bottom: 10px;">
+                    <tr valign="top">
+                        <td colspan="2">
+                            <div>
+                                <label class="input-label" style=""><%= scope.textStyle %></label>
+                                <div id="slide-combo-grad-type" style="width: 100%;"></div>
+                            </div>
+                        </td>
+                        <td rowspan="2" style="width: 100%;">
+                            <div class="float-right">
+                                <label class="input-label"><%= scope.textDirection %></label>
+                                <div id="slide-button-direction"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr valign="bottom">
+                        <td>
+                            <label class="input-label angle-label"><%= scope.textAngle %></label>
+                        </td>
+                        <td>
+                            <div id="slide-spin-gradient-angle" style="display: inline-block; width: 60px;"></div>
+                        </td>
+                    </tr>
+                </table>
+                <label class="input-label" style="display:block;margin-bottom: 5px;"><%= scope.textGradient %></label>
+                <div style="display: inline-block; margin-top: 3px;">
+                    <div id="slide-slider-gradient" style="display: inline-block; vertical-align: middle;"></div>
+                </div>
+                <div style="height: 40px;margin-top:6px;display:flex;justify-content:space-between;">
+                    <div style="display: flex;">
+                    <div style="">
+                        <label class="input-label" style=""><%= scope.strColor %></label>
+                        <div id="slide-gradient-color-btn"></div>
+                    </div>
+                    <div class="margin-left-10">
+                        <label class="input-label" style=""><%= scope.textPosition %></label>
+                        <div id="slide-gradient-position"></div>
+                    </div>
+                    </div>
+                    <div style="display:flex;padding-top:15px;">
+                        <div id="slide-gradient-add-step"></div>
+                        <div id="slide-gradient-remove-step"></div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="padding-small" id="slide-panel-transparent-fill" style="width: 100%;">
+                <label class="header" style="display:block;"><%= scope.strTransparency %></label>
+                <div style="display: inline-block; margin-top: 3px;">
+                    <label id="slide-lbl-transparency-start">0</label>
+                    <div id="slide-slider-transparency" style="display: inline-block;margin: 0 4px; vertical-align: middle;"></div>
+                    <label id="slide-lbl-transparency-end">100</label>
+                </div>
+                <div id="slide-spin-transparency" class="float-right"></div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-small">
+            <div class="separator horizontal"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-small">
+            <div id="slide-checkbox-slidenum"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-small">
+            <div id="slide-checkbox-datetime"></div>
+        </td>
+    </tr>
+
+    <tr class="finish-cell"></tr>
+</table>

@@ -1,0 +1,58 @@
+.radiobox {
+    margin-bottom: 0;
+    .font-size-normal();
+    font-weight: normal;
+    position: relative;
+    min-height: 1em;
+
+    display: flex;
+    align-items: center;
+
+    svg {
+        .margin-right-8();
+
+        .rb-circle {
+            fill: @background-normal-ie;
+            fill: @background-normal;
+            stroke: @border-regular-control-ie;
+            stroke: @border-regular-control;
+        }
+
+        .rb-check-mark {
+            fill: @text-normal-ie;
+            fill: @text-normal;
+        }
+    }
+
+    input[type=radio] {
+        display: none;
+
+        &:not(:checked) + svg {
+            .rb-check-mark {
+                display: none;
+            }
+        }
+    }
+
+    &.disabled, &:disabled {
+        svg, span {
+            opacity: @component-disabled-opacity-ie;
+            opacity: @component-disabled-opacity;
+            pointer-events: none;
+        }
+    }
+
+    &:focus:not(.disabled) {
+        svg {
+            .rb-circle {
+                stroke: @border-control-focus-ie;
+                stroke: @border-control-focus;
+            }
+        }
+
+        span {
+            outline: @scaled-one-px-value-ie dotted @border-control-focus-ie;
+            outline: @scaled-one-px-value dotted @border-control-focus;
+        }
+    }
+}

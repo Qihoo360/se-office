@@ -1,0 +1,141 @@
+<div class="toolbar" style="height: 41px; padding: 10px 0;">
+    <% if ( isEditDiagram ) { %>
+        <!----------------------->
+        <!-- Edit diagram mode -->
+        <!----------------------->
+        <section class="simple-bar">
+            <div class="group small">
+                <div class="elset">
+                    <span class="btn-slot split" id="slot-btn-copy"></span>
+                    <span class="btn-slot split" id="slot-btn-paste"></span>
+                    <span class="btn-slot split" id="slot-btn-undo"></span>
+                    <span class="btn-slot" id="slot-btn-redo"></span>
+                </div>
+            </div>
+            <div class="separator short"></div>
+            <div class="group small">
+                <div class="elset">
+                    <span class="btn-slot split" id="slot-btn-formula"></span>
+                </div>
+            </div>
+            <div class="separator short"></div>
+            <div class="group small">
+                <div class="elset">
+                    <span class="btn-slot split" id="slot-btn-digit-dec"></span>
+                    <span class="btn-slot split" id="slot-btn-digit-inc"></span>
+                    <span class="btn-slot" id="slot-btn-format" style="width: 80px; vertical-align: middle;"></span>
+                </div>
+            </div>
+            <div class="separator short"></div>
+            <div class="group small">
+                <div class="elset">
+                    <span class="btn-slot text" id="slot-btn-chart-data"></span>
+                    <span class="btn-slot text margin-left-12" id="slot-btn-chart-type"></span>
+                    <span class="btn-slot margin-left-12" id="slot-btn-chart" style="width: auto;"></span>
+                </div>
+            </div>
+            <div class="group" style="width: 100%;"></div>
+        </section>
+    <% } else if ( isEditMailMerge ) { %>
+        <!----------------------->
+        <!-- Edit mail merge mode -->
+        <!----------------------->
+        <section class="simple-bar">
+            <div class="group small">
+                <div class="elset">
+                    <span class="btn-slot split" id="slot-btn-copy"></span>
+                    <span class="btn-slot split" id="slot-btn-paste"></span>
+                    <span class="btn-slot split" id="slot-btn-undo"></span>
+                    <span class="btn-slot" id="slot-btn-redo"></span>
+                </div>
+            </div>
+            <div class="separator short"></div>
+            <div class="group small">
+                <div class="elset">
+                    <span class="btn-slot split" id="slot-btn-sortdesc"></span>
+                    <span class="btn-slot" id="slot-btn-sortasc"></span>
+                </div>
+            </div>
+            <div class="separator short"></div>
+            <div class="group small">
+                <div class="elset">
+                    <span class="btn-slot split" id="slot-btn-setfilter"></span>
+                    <span class="btn-slot" id="slot-btn-clear-filter"></span>
+                </div>
+            </div>
+            <div class="separator short"></div>
+            <div class="group small">
+                <div class="elset">
+                    <span class="btn-slot" id="slot-btn-search"></span>
+                </div>
+            </div>
+            <div class="group" style="width: 100%;"></div>
+        </section>
+    <% } else if ( isEditOle ) { %>
+        <!----------------------->
+        <!-- Edit ole object -->
+        <!----------------------->
+        <section class="simple-bar">
+            <div class="group small">
+                <div class="elset">
+                    <span class="btn-slot split-small" id="slot-btn-copy"></span>
+                    <span class="btn-slot split-small" id="slot-btn-paste"></span>
+                    <span class="btn-slot split-small" id="slot-btn-undo"></span>
+                    <span class="btn-slot" id="slot-btn-redo"></span>
+                </div>
+            </div>
+            <div class="separator short"></div>
+            <div class="group small">
+                <div class="elset" style="width: 172px;">
+                    <span class="btn-slot float-left" id="slot-field-fontname" style="width: 80px;"></span>
+                    <span class="btn-slot float-left margin-left-2" id="slot-field-fontsize" style="width: 35px;"></span>
+                    <span class="btn-slot split float-left margin-left-2" id="slot-btn-fontcolor" style="margin-top: 1px;"></span>
+                    <span class="btn-slot float-left margin-left-2" id="slot-btn-formatting" style="margin-top: 1px;"></span>
+                </div>
+            </div>
+            <div class="separator short"></div>
+            <div class="group small">
+                <div class="elset font-attr">
+                    <span class="btn-slot split" id="slot-btn-halign"></span>
+                    <span class="btn-slot split" id="slot-btn-valign"></span>
+                    <span class="btn-slot split-small" id="slot-btn-wrap"></span>
+                    <span class="btn-slot split" id="slot-btn-merge"></span>
+                </div>
+            </div>
+            <div class="separator short"></div>
+            <div class="group small">
+                <div class="elset font-attr">
+                    <span class="btn-slot split" id="slot-btn-borders"></span>
+                    <span class="btn-slot split" id="slot-btn-fillparag"></span>
+                    <span class="btn-slot split" id="slot-btn-table-tpl"></span>
+                    <span class="btn-slot split" id="slot-btn-cell-style"></span>
+                </div>
+            </div>
+            <div class="separator short"></div>
+            <div class="group small">
+                <div class="elset">
+                    <span class="btn-slot float-left" id="slot-btn-format" style="width: 80px;"></span>
+                </div>
+            </div>
+            <div class="separator short"></div>
+            <div class="group small">
+                <div class="elset">
+                    <span class="btn-slot split" id="slot-btn-formula"></span>
+                </div>
+            </div>
+            <div class="separator short"></div>
+            <div class="group small">
+                <div class="elset">
+                    <span class="btn-slot" id="slot-btn-search"></span>
+                </div>
+            </div>
+            <div class="group" style="width: 100%;padding-left: 0;"></div>
+            <div class="group small padding-right-10">
+                <div class="elset">
+                    <span class="btn-slot float-left" id="slot-btn-visible-area" style="width: auto;"></span>
+                    <span class="btn-slot float-left" id="slot-btn-visible-area-close" style="width: auto;"></span>
+                </div>
+            </div>
+        </section>
+    <% } %>
+</div>

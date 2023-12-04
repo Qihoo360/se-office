@@ -1,0 +1,152 @@
+<table cols="1">
+    <tr>
+        <td>
+            <label class="header"><%= scope.textTemplate %></label>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-small">
+            <div class="" id="textart-combo-template" style="width: 100%; height: 64px;"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-small">
+            <div class="separator horizontal"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="header"><%= scope.strFill %></label>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-small">
+            <div id="textart-combo-fill-src" style="width: 100%;"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div id="textart-panel-color-fill" class="padding-small" style="width: 100%;">
+                <div id="textart-back-color-btn" style=""></div>
+            </div>
+            <div id="textart-panel-gradient-fill" class="settings-hidden padding-small" style="width: 100%;">
+                <table cols="3" style="margin-bottom: 10px;">
+                    <tr valign="top">
+                        <td colspan="2">
+                            <div>
+                                <label class="input-label" style=""><%= scope.textStyle %></label>
+                                <div id="textart-combo-grad-type" style="width: 100%;"></div>
+                            </div>
+                        </td>
+                        <td rowspan="2" style="width: 100%;">
+                            <div class="float-right">
+                                <label class="input-label"><%= scope.textDirection %></label>
+                                <div id="textart-button-direction"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr valign="bottom">
+                        <td>
+                            <label class="input-label angle-label"><%= scope.textAngle %></label>
+                        </td>
+                        <td>
+                            <div id="textart-spin-gradient-angle" style="display: inline-block; width: 60px;"></div>
+                        </td>
+                    </tr>
+                </table>
+                <label class="input-label" style="display:block;margin-bottom: 5px;"><%= scope.textGradient %></label>
+                <div style="display: inline-block; margin-top: 3px;">
+                    <div id="textart-slider-gradient" style="display: inline-block; vertical-align: middle;"></div>
+                </div>
+                <div style="height: 40px;margin-top:6px;display:flex;justify-content:space-between;">
+                    <div style="display: flex;">
+                    <div style="">
+                        <label class="input-label" style=""><%= scope.strColor %></label>
+                        <div id="textart-gradient-color-btn"></div>
+                    </div>
+                    <div class="margin-left-10">
+                        <label class="input-label" style=""><%= scope.textPosition %></label>
+                        <div id="textart-gradient-position"></div>
+                    </div>
+                    </div>
+                    <div style="display:flex;padding-top:15px;">
+                        <div id="textart-gradient-add-step"></div>
+                        <div id="textart-gradient-remove-step"></div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="padding-small" id="textart-panel-transparent-fill" style="width: 100%;">
+                <label class="header" style="display:block;"><%= scope.strTransparency %></label>
+                <div style="display: inline-block; margin-top: 3px;">
+                    <label id="textart-lbl-transparency-start">0</label>
+                    <div id="textart-slider-transparency" style="display: inline-block;margin: 0 4px; vertical-align: middle;"></div>
+                    <label id="textart-lbl-transparency-end">100</label>
+                </div>
+                <div id="textart-spin-transparency" class="float-right"></div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-small">
+            <div class="separator horizontal"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="header"><%= scope.strStroke %></label>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-small">
+        <div style="display:inline-block;width:100px;vertical-align: middle;">
+            <label class="input-label" style=""><%= scope.strSize %></label>
+            <div id="textart-combo-border-size" style="width: 93px;"></div>
+        </div>
+        <div style="display:inline-block;vertical-align: middle;">
+            <label class="input-label" style=""><%= scope.strColor %></label>
+            <div id="textart-border-color-btn" style=""></div>
+        </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-small">
+        <div style="display:inline-block;width:100px;vertical-align: middle;">
+            <label class="input-label" style=""><%= scope.strType %></label>
+            <div id="textart-combo-border-type" style="width: 93px;"></div>
+        </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            <div class="padding-small" id="textart-line-panel-transparent" style="width: 100%;">
+                <label class="header" style="display:block;"><%= scope.strTransparency %></label>
+                <div style="display: inline-block; margin-top: 3px;">
+                    <label id="textart-line-lbl-transparency-start">0</label>
+                    <div id="textart-line-slider-transparency" style="display: inline-block;margin: 0 4px; vertical-align: middle;"></div>
+                    <label id="textart-line-lbl-transparency-end">100</label>
+                </div>
+                <div id="textart-line-spin-transparency" class="float-right"></div>
+            </div>
+        </td>
+    </tr>
+    <tr class="textart-transform">
+        <td class="padding-small">
+            <div class="separator horizontal"></div>
+        </td>
+    </tr>
+    <tr class="textart-transform">
+        <td>
+            <label class="header"><%= scope.textTransform %></label>
+        </td>
+    </tr>
+    <tr class="textart-transform">
+        <td class="padding-small">
+            <div class="" id="textart-combo-transform" style="width: 100%; height: 42px;"></div>
+        </td>
+    </tr>
+    <tr class="finish-cell"></tr>
+</table>

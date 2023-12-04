@@ -1,0 +1,108 @@
+<% if (!hide && !filtered) { %>
+    <div id="<%= id %>" class="user-comment-item">
+
+        <!-- comment block -->
+
+        <div class="user-name">
+            <div class="color" style="display: inline-block; background-color: <% if (usercolor!==null) { %><%=usercolor%><% } else { %> #cfcfcf <% } %>; " ></div><%= scope.getEncodedName(parsedName) %>
+        </div>
+        <div class="user-date"><%=date%></div>
+        <% if (quote!==null && quote!=='') { %>
+        <div class="user-quote"><%=scope.getFixedQuote(quote)%></div>
+        <% } %>
+        <% if (!editText || scope.viewmode) { %>
+            <div oo_editor_input="true" tabindex="-1" class="user-message user-select"><%=scope.pickLink(comment)%></div>
+        <% } else { %>
+            <div class="inner-edit-ct">
+                <textarea class="msg-reply user-select textarea-control" maxlength="maxCommLength"><%=comment%></textarea>
+                <button class="btn normal dlg-btn primary btn-inner-edit" id="id-comments-change">textEdit</button>
+                <button class="btn normal dlg-btn btn-inner-close">textCancel</button>
+            </div>
+        <% } %>
+
+        <!-- replys elements -->
+
+        <% var add_arrow = true; %>
+        <% if (replys.length) { %>
+            <% _.each(replys, function (item, index) { %>
+                <% if (!item.get("hide")) { %>
+                <% if (add_arrow) { add_arrow = false; %>
+                    <div class="reply-arrow img-commonctrl"></div>
+                <% } %>
+                <div class="reply-item-ct" <% if (scope.viewmode && index==replys.length-1) { %>style="padding-bottom: 0;" <% } %>;>
+                    <div class="user-name">
+                        <div class="color" style="display: inline-block; background-color: <% if (item.get("usercolor")!==null) { %><%=item.get("usercolor")%><% } else { %> #cfcfcf <% } %>; " ></div><%= scope.getEncodedName(item.get("parsedName")) %>
+                    </div>
+                    <div class="user-date"><%=item.get("date")%></div>
+                    <% if (!item.get("editText")) { %>
+                        <div oo_editor_input="true" tabindex="-1" class="user-message user-select"><%=scope.pickLink(item.get("reply"))%></div>
+                        <% if (!scope.viewmode) { %>
+                            <div class="btns-reply-ct">
+                            <% if (item.get("editable")) { %>
+                                <div class="btn-edit img-commonctrl" data-value="<%=item.get("id")%>"></div>
+                            <% } %>
+                            <% if (item.get("removable")) { %>
+                                <div class="btn-delete img-commonctrl" data-value="<%=item.get("id")%>"></div>
+                            <% } %>
+                            </div>
+                        <%}%>
+                    <% } else { %>
+                        <div class="inner-edit-ct">
+                            <textarea class="msg-reply textarea-fix user-select textarea-control" maxlength="maxCommLength"><%=item.get("reply")%></textarea>
+                            <button class="btn normal dlg-btn primary btn-inner-edit btn-fix" id="id-comments-change">textEdit</button>
+                            <button class="btn normal dlg-btn btn-inner-close">textClose</button>
+                        </div>
+                    <% } %>
+                </div>
+                <% } %>
+            <% }); %>
+        <% } %>
+
+        <!-- add reply button -->
+
+        <% if (!showReply && !scope.viewmode) { %>
+            <% if (replys.length && !add_arrow) { %>
+                <label class="user-reply with-reply" role="presentation" tabindex="-1">textAddReply</label>
+            <% } else { %>
+                <label class="user-reply" role="presentation" tabindex="-1">textAddReply</label>
+            <% } %>
+        <% } %>
+
+        <!-- edit buttons -->
+
+        <% if (!editText && !lock) { %>
+            <div class="edit-ct">
+                <% if (!scope.viewmode) { %>
+                    <% if (editable) { %>
+                        <div class="btn-edit img-commonctrl"></div>
+                    <% } %>
+                    <% if (removable) { %>
+                        <div class="btn-delete img-commonctrl"></div>
+                    <% } %>
+                <% } %>
+                <% if (editable && !scope.viewmode) { %>
+                    <div class="btn-resolve <% if (resolved) print('comment-resolved') %>" data-toggle="tooltip"></div>
+                <% } else if ((!editable || scope.viewmode) && resolved) { %>
+                    <div class="icon-resolve i-comment-resolved" data-toggle="tooltip"></div>
+                <% } %>
+            </div>
+        <% } %>
+
+        <!-- reply -->
+
+        <% if (showReply) { %>
+            <div class="reply-ct">
+                <textarea class="msg-reply user-select textarea-control" placeholder="textAddReply" maxlength="maxCommLength"></textarea>
+                <button class="btn normal dlg-btn primary btn-reply" id="id-comments-change">textReply</button>
+                <button class="btn normal dlg-btn btn-close">textClose</button>
+            </div>
+        <% } %>
+        <% if (lock) { %>
+            <div class="lock-area"></div>
+            <div class="lock-author"><%=lockuserid%></div>
+        <% } %>
+        <% if (!last) { %>
+            <div class="separator-cmt"></div>
+        <% } %>
+    </div>
+<% } %>

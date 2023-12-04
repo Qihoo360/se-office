@@ -1,0 +1,546 @@
+.synch-tip-root {
+    position: fixed;
+    z-index: @zindex-navbar + 2;
+
+    &:not(.simple) {
+        max-width: 300px;
+    }
+
+    &.simple {
+        max-width: 700px;
+        left: 50%;
+        transform: translate(-50%, 20px);
+        .tip-arrow {
+            display: none;
+        }
+    }
+
+    &.no-arrow {
+        .tip-arrow {
+            display: none;
+        }
+    }
+
+    &.closable {
+        .asc-synchronizetip {
+            .padding-x(15px, 30px);
+        }
+    }
+
+    &.theme-color {
+        .asc-synchronizetip {
+            background-color: @header-background-color-ie;
+            background-color: @header-background-color;
+            color: @text-toolbar-header-ie;
+            color: @text-toolbar-header;
+            border-color: @header-background-color-ie;
+            border-color: @header-background-color;
+
+            .close {
+                &:before, &:after {
+                    background-color: @text-toolbar-header-ie;
+                    background-color: @text-toolbar-header;
+                }
+            }
+        }
+
+        .tip-arrow:before {
+            background-color: @header-background-color-ie;
+            background-color: @header-background-color;
+            border-color: @header-background-color-ie !important;
+            border-color: @header-background-color !important;
+        }
+        .tip-arrow:after {
+            border-color: @header-background-color-ie !important;
+            border-color: @header-background-color !important;
+        }
+    }
+
+    &.toolbar-color {
+        .asc-synchronizetip {
+            background-color: @background-toolbar-ie;
+            background-color: @background-toolbar;
+            border-color: @background-toolbar-ie;
+            border-color: @background-toolbar;
+        }
+
+        .tip-arrow:before {
+            background-color: @background-toolbar-ie;
+            background-color: @background-toolbar;
+            border-color: @background-toolbar-ie !important;
+            border-color: @background-toolbar !important;
+        }
+        .tip-arrow:after {
+            border-color: @background-toolbar-ie !important;
+            border-color: @background-toolbar !important;
+        }
+    }
+
+    &.colored {
+        .asc-synchronizetip {
+            background-color: @background-contrast-popover-ie;
+            background-color: @background-contrast-popover;
+            color: @text-normal-ie;
+            color: @text-normal;
+            border-color: @border-contrast-popover-ie;
+            border-color: @border-contrast-popover;
+            .close {
+                &:before, &:after {
+                    background-color: @text-normal-ie;
+                    background-color: @text-normal;
+                }
+            }
+            .box-shadow(0 0 40px 0 @shadow-contrast-popover-ie);
+            .box-shadow(0 0 40px 0 @shadow-contrast-popover);
+        }
+
+        .tip-arrow:before {
+            background-color: @background-contrast-popover-ie;
+            background-color: @background-contrast-popover;
+            border-color: @border-contrast-popover-ie !important;
+            border-color: @border-contrast-popover !important;
+        }
+        .tip-arrow:after {
+            border-color: @border-contrast-popover-ie !important;
+            border-color: @border-contrast-popover !important;
+        }
+
+        .btn-div {
+            display: inline-block;
+            border: 1px solid @border-regular-control-ie;
+            border: 1px solid @border-regular-control;
+            border-radius: 2px;
+            padding: 3px 12px;
+            margin-top: 10px;
+            &:hover {
+                background-color: @highlight-button-hover-ie;
+                background-color: @highlight-button-hover;
+            }
+
+            &:active {
+                background-color: @highlight-button-pressed-ie;
+                background-color: @highlight-button-pressed;
+                color: @text-normal-pressed-ie;
+                color: @text-normal-pressed;
+            }
+        }
+
+        .show-link label {
+            border-bottom: @scaled-one-px-value-ie dotted @text-normal-ie;
+            border-bottom: @scaled-one-px-value dotted @text-normal;
+            color: @text-normal-ie;
+            color: @text-normal;
+            cursor: pointer;
+
+            &:hover:not(:disabled) {
+                color: @text-normal;
+                border-bottom-color: dotted @text-normal;
+            }
+
+            &:active {
+                color: @text-normal;
+                border-bottom-color: dotted @text-normal;
+            }
+        }
+    }
+
+    &.inc-index {
+        z-index: @zindex-navbar + 4;
+    }
+
+    .tip-arrow {
+        position: absolute;
+        overflow: hidden;
+    }
+
+    &.right-top,
+    &.right-bottom,
+    &.right {
+        margin: 0 0 0 15px;
+    }
+
+    &.left-top,
+    &.left-bottom,
+    &.left {
+        margin: 0 15px 0 0;
+    }
+
+    &.top-left,
+    &.top-right,
+    &.top {
+        margin: 0 0 15px 0;
+    }
+
+    &.bottom-left,
+    &.bottom-right,
+    &.bottom {
+        margin: 15px 0 0 0;
+    }
+
+    &.right-top,
+    &.right-bottom {
+        margin: 0 0 0 15px;
+    }
+
+    &.right {
+        .tip-arrow {
+            left: -12px;
+            top: 50%;
+            margin-top: -7px;
+            width: 16px;
+            height: 15px;
+            .box-shadow(0 0 8px -5px rgba(0, 0, 0, 0.2));
+
+            &:before {
+                top: 0;
+                left: 8px;
+                width: 16px;
+            }
+        }
+    }
+    &.left {
+        .tip-arrow {
+            right: -13px;
+            top: 50%;
+            margin-top: -7px;
+            width: 16px;
+            height: 16px;
+            .box-shadow(0 0 8px -5px rgba(0, 0, 0, 0.2));
+
+            &:before {
+                top: 0;
+                left: -8px;
+                width: 16px;
+            }
+        }
+    }
+    &.top {
+        .tip-arrow {
+            left: 50%;
+            bottom: -12px;
+            margin-left: -6px;
+            width: 16px;
+            height: 16px;
+            .box-shadow(0 0 8px -5px rgba(0, 0, 0, 0.2));
+
+            &:before {
+                top: -6px;
+                left: 0;
+                width: 16px;
+             }
+        }
+    }
+    &.bottom {
+        .tip-arrow {
+            left: 50%;
+            top: -11px;
+            margin-left: -7px;
+            width: 15px;
+            height: 15px;
+            .box-shadow(0 0 8px -5px rgba(0, 0, 0, 0.2));
+
+            &:before {
+                top: 7px;
+                left: 0;
+                width: 16px;
+            }
+        }
+    }
+
+    &.right-bottom {
+        .tip-arrow {
+            left: -15px;
+            top: 0;
+            width: 16px;
+            height: 15px;
+            .box-shadow(0 -5px 8px -5px rgba(0, 0, 0, 0.2));
+
+            &:before {
+                top: -7px;
+                left: 7px;
+                width: 16px;
+            }
+            &:after {
+                top: 0px;
+                left: 4px;
+                border-top: @scaled-one-px-value-ie solid @background-notification-popover-ie;
+                border-top: @scaled-one-px-value solid @background-notification-popover;
+            }
+        }
+    }
+
+    &.left-bottom {
+        .tip-arrow {
+            right: -15px;
+            top: 0;
+            width: 16px;
+            height: 15px;
+            .box-shadow(0 -5px 8px -5px rgba(0, 0, 0, 0.2));
+
+            &:before {
+                top: -7px;
+                left: -7px;
+            }
+            &:after {
+                top: 0px;
+                left: -4px;
+                border-top: @scaled-one-px-value-ie solid @background-notification-popover-ie;
+                border-top: @scaled-one-px-value solid @background-notification-popover;
+            }
+        }
+    }
+
+    &.top-left {
+        .tip-arrow {
+            right: 0;
+            bottom: -14px;
+            width: 15px;
+            height: 15px;
+            .box-shadow(5px 0 8px -5px rgba(0, 0, 0, 0.2));
+
+            &:before {
+                top: -8px;
+                left: 8px;
+            }
+            &:after {
+                top: -6px;
+                left: 0px;
+                border-right: @scaled-one-px-value-ie solid @background-notification-popover-ie;
+                border-right: @scaled-one-px-value solid @background-notification-popover;
+            }
+        }
+    }
+
+    &.top-right {
+        .tip-arrow {
+            left: 0;
+            bottom: -14px;
+            width: 15px;
+            height: 15px;
+            .box-shadow(-5px 0 8px -5px rgba(0, 0, 0, 0.2));
+
+            &:before {
+                top: -8px;
+                left: -8px;
+            }
+            &:after {
+                top: -6px;
+                left: 0px;
+                border-left: @scaled-one-px-value-ie solid @background-notification-popover-ie;
+                border-left: @scaled-one-px-value solid @background-notification-popover;
+            }
+        }
+    }
+
+    &.bottom-left {
+        .tip-arrow {
+            right: 0;
+            top: -14px;
+            width: 15px;
+            height: 15px;
+            .box-shadow(8px 5px 8px -5px rgba(0, 0, 0, 0.2));
+
+            &:before {
+                top: 8px;
+                left: 8px;
+            }
+            &:after {
+                top: 6px;
+                left: 0px;
+                border-right: @scaled-one-px-value-ie solid @background-notification-popover-ie;
+                border-right: @scaled-one-px-value solid @background-notification-popover;
+            }
+        }
+    }
+
+    &.bottom-right {
+        .tip-arrow {
+            left: 0;
+            top: -14px;
+            width: 15px;
+            height: 15px;
+            .box-shadow(-8px 0 8px -5px rgba(0, 0, 0, 0.2));
+
+            &:before {
+                top: 8px;
+                left: -8px;
+            }
+            &:after {
+                top: 6px;
+                left: 0px;
+                border-left: @scaled-one-px-value-ie solid @background-notification-popover-ie;
+                border-left: @scaled-one-px-value solid @background-notification-popover;
+            }
+        }
+    }
+
+    &.right-top {
+        .tip-arrow {
+            left: -14px;
+            bottom: 0;
+            width: 15px;
+            height: 15px;
+            .box-shadow(0 5px 8px -5px rgba(0, 0, 0, 0.2));
+
+            &:before {
+                top: 7px;
+                left: 7px;
+                width: 16px;
+            }
+            &:after {
+                top: 0px;
+                left: 4px;
+                border-bottom: @scaled-one-px-value-ie solid @background-notification-popover-ie;
+                border-bottom: @scaled-one-px-value solid @background-notification-popover;
+            }
+        }
+    }
+
+    &.left-top {
+        .tip-arrow {
+            right: -14px;
+            bottom: 0;
+            width: 15px;
+            height: 13px;
+            .box-shadow(-5px 8px 8px -5px rgba(0, 0, 0, 0.2));
+
+            &:before {
+                bottom: -7px;
+                left: -7px;
+            }
+            &:after {
+                top: -2px;
+                left: -4px;
+                border-bottom: @scaled-one-px-value-ie solid @background-notification-popover-ie;
+                border-bottom: @scaled-one-px-value solid @background-notification-popover;
+            }
+        }
+    }
+}
+
+.asc-synchronizetip {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: @background-notification-popover-ie;
+    background-color: @background-notification-popover;
+    overflow: visible;
+
+    border: @scaled-one-px-value-ie solid @background-notification-popover-ie;
+    border: @scaled-one-px-value solid @background-notification-popover;
+
+    .bottom-right &,
+    .right-bottom & {
+        border-top-left-radius: 0;
+    }
+
+    .bottom-left &,
+    .left-bottom & {
+        border-top-right-radius: 0;
+    }
+
+    .top-right &,
+    .right-top & {
+        border-bottom-left-radius: 0;
+    }
+
+    .top-left &,
+    .left-top & {
+        border-bottom-right-radius: 0;
+    }
+
+    .box-shadow(0 4px 15px -2px rgba(0, 0, 0, 0.5));
+    .font-size-normal();
+}
+
+.asc-synchronizetip .tip-arrow:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    background-color: @background-notification-popover-ie;
+    background-color: @background-notification-popover;
+    width: 15px;
+    height: 15px;
+
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+    border: @scaled-one-px-value-ie solid @background-notification-popover-ie;
+    border: @scaled-one-px-value solid @background-notification-popover;
+}
+.asc-synchronizetip .tip-arrow:after {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
+}
+
+.asc-synchronizetip .show-link {
+    margin-top: 10px;
+}
+
+.show-link label {
+    border-bottom: @scaled-one-px-value-ie dotted @text-link-ie;
+    border-bottom: @scaled-one-px-value dotted @text-link;
+    color: @text-link-ie;
+    color: @text-link;
+    cursor: pointer;
+
+    &:hover:not(:disabled) {
+        color: @text-link-hover;
+        border-bottom-color: dotted @text-link-hover;
+    }
+
+    &:active {
+        color: @text-link-active;
+        border-bottom-color: dotted @text-link-hover;
+    }
+}
+
+.asc-synchronizetip .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    margin: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: transform .3s;
+
+    .rtl & {
+        right: auto;
+        left: 0;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    &:before, &:after {
+        content: ' ';
+        position: absolute;
+        left: 7px;
+        left: calc(7px/@pixel-ratio-factor);
+        top: @scaled-one-px-value-ie;
+        top: @scaled-one-px-value;
+        height: 14px;
+        width: @scaled-one-px-value-ie;
+        width: @scaled-one-px-value;
+        background-color: @icon-normal-ie;
+        background-color: @icon-normal;
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
+}

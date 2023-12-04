@@ -1,0 +1,85 @@
+<table cols="1">
+    <tr>
+        <td class="padding-small">
+            <button type="button" class="btn btn-text-default" id="mmerge-button-edit-data" style="width:100%;" data-hint="1" data-hint-direction="bottom" data-hint-offset="big"><%= scope.textEditData %></button>
+            <label id="mmerge-lbl-add-recipients" style="margin-top: 4px;"><%= scope.textAddRecipients %></label>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-small">
+            <div class="separator horizontal"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="header"><%= scope.textMergeFields %></label>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding-bottom: 13px;">
+            <div id="mmerge-btn-ins-field" style="width:100%;"></div>
+        </td>
+    </tr>
+    <tr>
+        <td  style="padding-bottom: 13px;">
+            <div id="mmerge-switcher-highlight" style="display: inline-block; vertical-align: top;"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-small">
+            <div id="mmerge-switcher-preview" style="display: inline-block; vertical-align: top;"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-small">
+            <div id="mmerge-button-first"></div>
+            <div id="mmerge-button-prev"></div>
+            <div id="mmerge-field-num"></div>
+            <div id="mmerge-button-next"></div>
+            <div id="mmerge-button-last"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-small">
+            <div class="separator horizontal"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="header"><%= scope.textMergeTo %></label>
+        </td>
+    </tr>
+    <tr>
+        <td class="">
+            <div id="mmerge-combo-merge-to" style="width: 100%;padding-bottom: 2px;"></div>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-medium">
+            <label style=""><%= scope.textMaxRecepients %></label>
+            <label class="link-solid" id="mmerge-readmore-link" data-hint="1" data-hint-direction="bottom" data-hint-offset="small"><%= scope.textReadMore %></label>
+        </td>
+    </tr>
+    <tr>
+        <td class="padding-large">
+            <div id="mmerge-radio-all"></div>
+            <div id="mmerge-radio-current"></div>
+            <div id="mmerge-radio-from-to"></div>
+            <div id="mmerge-field-from"></div>
+            <label class="text-to-label"><%= scope.textTo %></label>
+            <div id="mmerge-field-to"></div>
+        </td>
+    </tr>
+</table>
+<table cols="2">
+    <tr>
+        <td width="50%">
+            <button type="button" class="btn btn-text-default" id="mmerge-button-download" style="width:90px;" data-hint="1" data-hint-direction="bottom" data-hint-offset="big"><%= scope.textDownload %></button>
+            <button type="button" class="btn btn-text-default hidden" id="mmerge-button-merge" style="width:90px;" data-hint="1" data-hint-direction="bottom" data-hint-offset="big"><%= scope.textMerge %></button>
+        </td>
+        <td class="text-align-right" width="50%">
+            <button type="button" class="btn btn-text-default" id="mmerge-button-portal" style="width:90px;" data-hint="1" data-hint-direction="bottom" data-hint-offset="big"><%= scope.textPortal %></button>
+        </td>
+    </tr>
+    <tr class="finish-cell"></tr>
+</table>
